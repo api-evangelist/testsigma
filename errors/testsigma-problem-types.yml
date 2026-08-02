@@ -1,0 +1,35 @@
+generated: '2026-07-21'
+method: searched
+source: https://testsigma.com/docs/api/overview/
+format: http-status
+envelope:
+  notes: >-
+    Testsigma's REST API does not publish an RFC 9457 problem+json error
+    catalog. Successful calls return HTTP 200 with a body carrying `status`,
+    `result`, and `message`. Authentication problems return HTTP 401. Execution
+    outcomes are reported through the `result` field rather than error codes.
+problems:
+  - status: 401
+    title: Unauthorized
+    detail: >-
+      Missing or invalid Bearer API Key. All endpoints require
+      `Authorization: Bearer <API_Key>`.
+    remediation: >-
+      Generate a valid API Key from the Testsigma app settings and send it as a
+      Bearer token.
+execution_results:
+  field: result
+  values:
+    - code: QUEUED
+      meaning: Run accepted and queued for execution.
+    - code: PASSED
+      meaning: Test plan run completed and all tests passed.
+    - code: FAILED
+      meaning: Test plan run completed with one or more failed tests.
+    - code: ABORTED
+      meaning: Run aborted before normal completion.
+    - code: STOPPED
+      meaning: Run stopped by user or system.
+status_values:
+  field: status
+  values: [STATUS_CREATED, STATUS_COMPLETED]

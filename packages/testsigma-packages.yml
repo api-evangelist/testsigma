@@ -1,0 +1,29 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/testsigmahq
+packages:
+  - language: javascript
+    registry: npm
+    name: "@testsigma/cli"
+    url: https://www.npmjs.com/package/@testsigma/cli
+    install: npm install -g @testsigma/cli@beta
+    repo: https://github.com/testsigmahq/testsigma-cli
+    kind: cli
+    official: true
+    notes: >-
+      Command-line tool to author, validate, run, and push Testsigma DSL tests
+      to the Testsigma Arcus & Suite platform. Requires Node.js 22+.
+  - language: java
+    registry: github
+    name: testsigma-java-sdk
+    url: https://github.com/testsigmahq/testsigma-java-sdk
+    kind: sdk
+    official: true
+    notes: First-party Java SDK for Testsigma integration.
+  - language: java
+    registry: github
+    name: testsigma-addon-archetype
+    url: https://github.com/testsigmahq/testsigma-addon-archetype
+    kind: archetype
+    official: true
+    notes: Maven archetype for building Testsigma addons.

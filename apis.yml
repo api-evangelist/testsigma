@@ -1,7 +1,14 @@
 aid: testsigma
 name: Testsigma
-description: 'Testsigma is a company surfaced as a portfolio company of accel and added to the API Evangelist
-  network as a stub for enrichment. Sector: ai. This profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  Testsigma is an agentic, GenAI-powered codeless test automation platform. AI
+  co-workers work alongside QA teams to author and maintain automated tests in
+  natural language across web, mobile, desktop, API, and packaged applications
+  like Salesforce and SAP. Testsigma exposes a REST API
+  (app.testsigma.com/api/v1, Bearer API-Key authentication) to manage projects,
+  applications, environments, elements, uploads, and test plans, and to trigger
+  and poll test-plan executions remotely from CI/CD pipelines. A Community
+  Edition is open source under Apache 2.0. Testsigma is backed by Accel.
 url: https://raw.githubusercontent.com/api-evangelist/testsigma/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,13 +16,55 @@ x-backed-by:
 - accel
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+image: https://website-static.testsigma.com/website-next/nextjs/6d1168/favicons/apple-touch-icon.png
 tags:
 - Company
 - Ai
-apis: []
+- Testing
+- Test Automation
+- QA
+- DevOps
+- Continuous Integration
+- Software Quality
+- Agentic AI
+apis:
+- name: Testsigma REST API
+  description: >-
+    REST API to manage Testsigma entities (projects, applications, environments,
+    elements, uploads, test plans) and to trigger and poll test-plan executions
+    remotely. Authenticated with a Bearer API Key.
+  humanURL: https://testsigma.com/docs/api/overview/
+  baseURL: https://app.testsigma.com/api/v1
+  tags:
+  - Test Automation
+  - Testing
+  - CI/CD
+  properties:
+  - type: APIReference
+    url: https://testsigma.com/docs/api/overview/
+  - type: Authentication
+    url: authentication/testsigma-authentication.yml
+  - type: Conventions
+    url: conventions/testsigma-conventions.yml
+  - type: ErrorCatalog
+    url: errors/testsigma-problem-types.yml
+  - type: DataModel
+    url: data-model/testsigma-data-model.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -24,3 +73,66 @@ maintainers:
 common:
 - type: Website
   url: https://testsigma.com/
+- type: DeveloperPortal
+  url: https://testsigma.com/docs/
+- type: Documentation
+  url: https://testsigma.com/docs/
+- type: APIReference
+  url: https://testsigma.com/docs/api/overview/
+- type: GettingStarted
+  url: https://testsigma.com/tutorials/getting-started/automate-rest-apis/
+- type: Support
+  url: https://support.testsigma.com/
+- type: Blog
+  url: https://testsigma.com/blog
+- type: GitHubOrganization
+  url: https://github.com/testsigmahq
+- type: Pricing
+  url: https://testsigma.com/pricing
+- type: SignUp
+  url: https://testsigma.com/signup
+- type: TermsOfService
+  url: https://testsigma.com/terms
+- type: PrivacyPolicy
+  url: https://testsigma.com/privacy-policy
+- type: StatusPage
+  url: https://status.testsigma.com
+- type: ChangeLog
+  url: changelog/testsigma-changelog.yml
+- type: Lifecycle
+  url: lifecycle/testsigma-lifecycle.yml
+- type: Authentication
+  url: authentication/testsigma-authentication.yml
+- type: Conventions
+  url: conventions/testsigma-conventions.yml
+- type: ErrorCatalog
+  url: errors/testsigma-problem-types.yml
+- type: DataModel
+  url: data-model/testsigma-data-model.yml
+- type: Packages
+  url: packages/testsigma-packages.yml
+- type: SDKs
+  url: packages/testsigma-packages.yml
+- type: CLI
+  url: cli/testsigma-cli.yml
+- type: MCPServer
+  url: mcp/testsigma-mcp.yml
+- type: LLMsTxt
+  url: llms/testsigma-llms.txt
+- type: Conformance
+  url: conformance/testsigma-conformance.yml
+- type: Compliance
+  url: https://trust.testsigma.com/
+- type: TrustCenter
+  url: security/testsigma-trust-center.yml
+- type: DomainSecurity
+  url: security/testsigma-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/testsigma-vulnerability-disclosure.yml
+- type: Security
+  url: https://testsigma.com/security
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 14
+  pass: local-v1

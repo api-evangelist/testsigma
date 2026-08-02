@@ -1,0 +1,11 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/testsigmahq/testsigma/releases
+scheme: github-releases
+notes: >-
+  Testsigma publishes releases for its open-source Community Edition platform
+  via GitHub Releases. This pointer references the live release feed as the
+  source of truth; a dated per-entry window is not mirrored here to avoid
+  staleness.
+release_notes_url: https://github.com/testsigmahq/testsigma/releases
+entries: []

@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: https://testsigma.com/docs/api/overview/
+summary:
+  types: [http]
+  http_schemes: [bearer]
+  api_key_in: [header]
+  notes: >-
+    All Testsigma REST API endpoints require a Bearer token which is the user's
+    personal API Key, generated from the Testsigma app configuration/settings.
+    There is no OAuth2 authorization-code flow and no documented scope surface
+    for the public REST API; the API key carries the user's own permissions.
+schemes:
+  - name: bearerToken
+    type: http
+    scheme: bearer
+    bearerFormat: api-key
+    in: header
+    header: Authorization
+    description: >-
+      Send the user's API Key as a Bearer token. The docs show the header as
+      `Authorization: Bearer <API_Key>`. The API Key is generated per-user in
+      the Testsigma app settings.
+    sources: [https://testsigma.com/docs/api/overview/]
+docs: https://testsigma.com/docs/api/overview/

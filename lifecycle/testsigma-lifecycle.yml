@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: searched
+source: https://testsigma.com/docs/api/overview/
+versioning:
+  scheme: uri-path
+  current: v1
+  docs: https://testsigma.com/docs/api/overview/
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No public deprecation policy or RFC 8594 Sunset/Deprecation header support was found for the REST API.
+sla:
+  url: null
+  uptime_target: null
+status_page: https://status.testsigma.com
+status_page_provider: Atlassian Statuspage
+status_page_components:
+  - Testsigma Web App
+  - Testsigma Mobile Inspector
+  - Testsigma Execution Engine
+  - Testsigma Visual Testing
+release_notes: https://github.com/testsigmahq/testsigma/releases
+deprecated_operations: []

@@ -1,0 +1,49 @@
+generated: '2026-07-21'
+method: searched
+source: https://testsigma.com/docs/api/overview/
+api: Testsigma REST API
+base_url: https://app.testsigma.com/api/v1
+authentication:
+  style: bearer-api-key
+  header: 'Authorization: Bearer <API_Key>'
+  ref: authentication/testsigma-authentication.yml
+versioning:
+  scheme: uri-path
+  current: v1
+  example: https://app.testsigma.com/api/v1/projects
+idempotency:
+  supported: false
+  notes: >-
+    No idempotency-key header or parameter is documented for the Testsigma REST
+    API. Writes (POST /execution_results, POST/PUT /environments) are not
+    documented as idempotent.
+pagination:
+  supported: unknown
+  notes: >-
+    List endpoints (GET /projects, /applications, /environments, /elements,
+    /test-plans) are not documented with explicit pagination parameters in the
+    public API reference.
+async_execution:
+  notes: >-
+    Test-plan execution is asynchronous. POST /execution_results returns a run
+    `id` and `status: STATUS_CREATED`; clients poll GET
+    /execution_results/{run_id} until `status: STATUS_COMPLETED`, then read the
+    `result` field (QUEUED | PASSED | FAILED | ABORTED | STOPPED).
+response_envelope:
+  notes: >-
+    Endpoints return HTTP 200 on success. Business outcome is carried in body
+    fields (`status`, `result`, `message`) rather than via HTTP status codes.
+  fields: [id, status, result, message]
+error_signaling:
+  ref: errors/testsigma-problem-types.yml
+  notes: >-
+    Authentication failures return HTTP 401. Success is HTTP 200 with the
+    outcome in the `result`/`status` body fields.
+timestamps:
+  notes: >-
+    Resources expose both millisecond timestamps (createdDate, updatedDate) and
+    epoch fields (createdAtEpoch, updatedAtEpoch).
+cross_links:
+  authentication: authentication/testsigma-authentication.yml
+  errors: errors/testsigma-problem-types.yml
+  lifecycle: lifecycle/testsigma-lifecycle.yml

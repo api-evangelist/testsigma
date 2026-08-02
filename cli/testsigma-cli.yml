@@ -1,0 +1,41 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/testsigmahq/testsigma-cli
+name: testsigma
+package: "@testsigma/cli"
+install:
+  - method: npm
+    command: npm install -g @testsigma/cli@beta
+    requires: Node.js 22+
+description: >-
+  CLI to author, run, and push end-to-end tests written in the Testsigma script
+  DSL to the Testsigma Arcus & Suite platform.
+commands:
+  authentication:
+    - command: testsigma login
+      summary: Initiate a login session.
+    - command: testsigma whoami
+      summary: Display the current authenticated user.
+    - command: testsigma logout
+      summary: Remove stored credentials.
+  test_development:
+    - command: testsigma code reference --type [web|mobile|api]
+      summary: View DSL documentation for a test type.
+    - command: testsigma code validate
+      summary: Check test syntax.
+    - command: testsigma code run
+      summary: Execute tests locally.
+  test_management:
+    - command: testsigma code push
+      summary: Send authored tests to the Testsigma platform.
+    - command: testsigma projects list
+      summary: Browse available projects.
+    - command: testsigma modules list
+      summary: View test modules.
+    - command: testsigma devices list
+      summary: See connected devices.
+  configuration:
+    - command: testsigma config-list
+      summary: Show active settings.
+    - command: testsigma --version
+      summary: Display the CLI version.

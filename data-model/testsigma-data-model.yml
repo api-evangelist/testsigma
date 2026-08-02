@@ -1,0 +1,44 @@
+generated: '2026-07-21'
+method: derived
+source: https://testsigma.com/docs/api/
+notes: >-
+  Entity graph derived from the documented Testsigma REST API resources and the
+  id-reference fields visible in their request/response bodies. No public
+  OpenAPI spec was available; relationships are inferred from documented fields.
+entities:
+  - name: Project
+    endpoint: /api/v1/projects
+    id: id
+  - name: Application
+    endpoint: /api/v1/applications
+    id: id
+  - name: Environment
+    endpoint: /api/v1/environments
+    id: id
+    fields: [name, description, projectId, variables]
+  - name: Element
+    endpoint: /api/v1/elements
+    id: id
+  - name: TestPlan
+    endpoint: /api/v1/test-plans
+    id: id
+  - name: Upload
+    endpoint: /api/v1/uploads
+    id: id
+  - name: ExecutionResult
+    endpoint: /api/v1/execution_results
+    id: id
+    fields: [executionId, result, status, startTime, endTime, duration, passedCount, failedCount, abortedCount]
+relationships:
+  - from: Environment
+    to: Project
+    type: belongs_to
+    via: projectId
+  - from: ExecutionResult
+    to: TestPlan
+    type: belongs_to
+    via: executionId
+  - from: ExecutionResult
+    to: Environment
+    type: belongs_to
+    via: environmentId
