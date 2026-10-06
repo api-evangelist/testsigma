@@ -42,7 +42,7 @@ accessModel:
   method: derived
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-21'
+modified: '2026-10-06'
 image: https://website-static.testsigma.com/website-next/nextjs/6d1168/favicons/apple-touch-icon.png
 tags:
 - Company
@@ -93,6 +93,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- url: https://testsigma.com/blog/feed/
+  type: BlogRSS
 - type: Website
   url: https://testsigma.com/
 - type: DeveloperPortal
