@@ -93,6 +93,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Plans
+  url: plans/testsigma-plans-pricing.yml
 - url: https://testsigma.com/blog/feed/
   type: BlogRSS
 - type: Website
