@@ -5,23 +5,6 @@ checked:
 - https://marketplace.atlassian.com/
 marketplace_apps: []
 edges:
-- partner_name: GitHub Marketplace (apps)
-  partner: github
-  partner_match: aggregator
-  type: marketplace
-  marketplace: github-apps
-  channel: partner-built
-  relationship: platform-app
-  direction: third-party
-  evidence: https://github.com/marketplace/arcus-by-testsigma
-  listing_count: 1
-  apps:
-  - Arcus By Testsigma
-  publisher_name: Testsigma Technologies Inc
-  badges:
-  - Verified domain
-  detected_by: sweep-devtools.py
-  detected: '2026-10-14'
 - partner_name: Atlassian Marketplace
   partner: atlassian
   partner_match: aggregator
