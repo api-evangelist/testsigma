@@ -10,6 +10,9 @@ checked:
 - https://addons.mozilla.org/api/v5/addons/addon/<slug>/
 - https://addons.mozilla.org/api/v5/addons/search/?type=extension&app=firefox
 - https://chromewebstore.google.com/sitemap
+- https://landscape.cd.foundation/data/full.json
+- https://plugins.jenkins.io/api/plugin/
+- https://plugins.jenkins.io/api/plugins
 marketplace_apps: []
 edges:
 - partner_name: Atlassian Marketplace
@@ -128,6 +131,26 @@ edges:
     detected: '2026-10-21'
   detected_by: sweep-browser-extension-stores.py
   first_seen: '2026-10-21'
+- partner_name: Jenkins (own)
+  partner: jenkins
+  partner_match: mirror
+  mirror_match: register-name
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://plugins.jenkins.io/testsigma/
+  mirror_of: jenkins/integrations/jenkins-integration-edges.yml
+  apps:
+  - Testsigma Test Plan run (testsigma)
+  listing_count: 1
+  category: Jenkins plugin
+  signal_note: 'publisher side of the all/jenkins listing; vendor-control: testsigma: maintainer display name ''Testsigma
+    Technologies'' -> register-name (register-name ''testsigma'' = testsigma; wikidata P856 testsigma.com agrees
+    or unheld)'
+  detected: '2026-10-22'
+  detected_by: sweep-jenkins-cd-foundation-plugins.py
 source:
 - https://github.com/marketplace?type=apps
 - https://marketplace.atlassian.com/
